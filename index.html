@@ -1,99 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ahana | Product Manager Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; color: #111; background: #fff; scroll-behavior: smooth; }
-    header, section { padding: 80px 20px; max-width: 800px; margin: auto; }
-    /* Navigation */
-    nav { position: fixed; top: 0; width: 100%; background: #fff; border-bottom: 1px solid #eee; box-shadow: 0 2px 4px rgba(0,0,0,0.05); z-index: 100; }
-    nav ul { list-style: none; display: flex; justify-content: center; margin: 0; padding: 15px 0; }
-    nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; padding: 4px 6px; transition: color 0.2s; }
-    nav a:hover { color: #3a0ca3; }
-
-/* Hero Section */
-    header h1 { font-size: 2.5rem; margin-bottom: 10px; color: #3a0ca3; }
-    header p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px; }
-    .btn { display: inline-block; background: #ffcc00; color: #111; padding: 10px 18px; border-radius: 4px; text-decoration: none; font-weight: bold; }
-    .btn:hover { background: #e6b800; }
-
-/* Sections */
-    h2 { font-size: 2rem; border-bottom: 3px solid #ffcc00; display: inline-block; margin-bottom: 20px; }
-    ul.skills { list-style: none; padding: 0; display: flex; flex-wrap: wrap; }
-    ul.skills li { margin: 5px 10px; font-weight: bold; }
-
-/* Projects Placeholder */
-    .project { border: 1px solid #eee; padding: 20px; border-radius: 6px; margin-bottom: 20px; transition: box-shadow 0.3s; }
-    .project:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
-
-/* Footer */
-    footer { padding: 40px 20px; text-align: center; font-size: 0.9rem; color: #666; }
-
-/* Mobile Responsive */
-    @media (max-width: 600px) {
-      header h1 { font-size: 2rem; }
-      nav ul { flex-direction: column; }
-      nav a { padding: 8px 0; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #000;
+      line-height: 1.6;
     }
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.3rem;
+      color: #FFD700;
+    }
+    section {
+      padding: 80px 20px;
+    }
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .about {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #444;
+    }
+    .projects {
+      background-color: #f9f9f9;
+    }
+    .project-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: left;
+    }
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .card p {
+      color: #444;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn-yellow { background-color: #FFD700; color: #000; }
+    .btn-purple { background-color: purple; color: #fff; }
+    .btn-black { background-color: #000; color: #fff; }
+    .contact {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact .btn-yellow { color: #000; }
+    .contact .btn-purple { color: #fff; }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero / Home -->
-  <header id="home">
-    <h1>Building for Humans.</h1>
-    <p>I’m Ahana Bhattacharya — Product Manager (aspiring) blending empathy, analytics, and strategy to build meaningful digital experiences.</p>
-    <a href="#projects" class="btn">See My Work</a>
+  <!-- Hero Section -->
+  <header>
+    <h1>Your Name</h1>
+    <p>From Banking to Building Products — A Journey of Design, Strategy & Growth</p>
   </header>
 
-  <!-- About -->
-  <section id="about">
+  <!-- About Section -->
+  <section>
     <h2>About Me</h2>
-    <p>Currently transitioning from a relationship management role in banking to product management. I bring a customer-first mindset, a love for data-driven insights, and a flair for delivering clean, impact-focused solutions.</p>
-    <ul class="skills">
-      <li>Product Strategy</li>
-      <li>Discovery & Research</li>
-      <li>Wireframing & UX</li>
-      <li>Analytics & SQL</li>
-    </ul>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Case Study 1</h3>
-      <p>Short overview of your product analysis or case study will go here.</p>
-    </div>
-    <div class="project">
-      <h3>Case Study 2</h3>
-      <p>Another placeholder for future work.</p>
+    <div class="about">
+      <p>
+        I started my career in banking, helping businesses grow by managing global client relationships. 
+        But my passion for creativity and problem-solving brought me back to design and product thinking.  
+        Today, I’m building my path toward product management, combining analytical skills from finance 
+        with my foundation in design to create meaningful solutions.
+      </p>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Let’s connect and build something impactful together:</p>
-    <p><strong>Email:</strong> yourname@example.com</p>
-    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
+  <!-- Projects Section -->
+  <section class="projects">
+    <h2>Case Studies & Projects</h2>
+    <div class="project-grid">
+
+      <!-- Project Card 1 -->
+      <div class="card">
+        <h3>Project Title 1</h3>
+        <p>A short description of your first case study or analysis. This could be a product teardown, UX audit, or market analysis.</p>
+        <a href="#" class="btn-yellow">Read More</a>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="card">
+        <h3>Project Title 2</h3>
+        <p>Another project description here. Later you can link this to a detailed page or PDF with your analysis.</p>
+        <a href="#" class="btn-purple">Read More</a>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="card">
+        <h3>Project Title 3</h3>
+        <p>Placeholder for another project or analysis — e.g., a competitor study or feature prioritization exercise.</p>
+        <a href="#" class="btn-black">Read More</a>
+      </div>
+
+    </div>
   </section>
 
-  <footer>
-    © 2025 Ahana Bhattacharya. All rights reserved.
-  </footer>
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Let’s Connect</h2>
+    <p>I’d love to hear from you — whether it’s about opportunities, collaborations, or just a conversation.</p>
+    <a href="mailto:ahana.works@gmail.com" class="btn-yellow">Email Me</a>
+    <a href="https://www.linkedin.com/in/ahana-bhattacharya-5679a7206/" target="_blank" class="btn-purple">LinkedIn</a>
+  </section>
 
 </body>
 </html>
