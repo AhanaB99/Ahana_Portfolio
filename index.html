@@ -3,70 +3,208 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio|Ahana</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="font-sans bg-gray-50 text-gray-900">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #111;
+      line-height: 1.6;
+    }
+    h1, h2, h3 { margin: 0; }
+    a { text-decoration: none; color: inherit; }
 
+    /* Navbar */
+    header {
+      background: #000;
+      color: #fff;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #FFD700;
+    }
+    nav a {
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #FFD700;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #000, #2e004f);
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 { font-size: 3rem; font-weight: bold; }
+    .hero p {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #f0f0f0;
+      margin: 15px 0 25px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 10px;
+      border-radius: 8px;
+      background-color: #FFD700;
+      color: #000;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+    .btn:hover { transform: scale(1.05); }
+
+    /* About */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 80px 20px;
+      background-color: #f9f9f9;
+    }
+    .about img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 20px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+    .about-text {
+      max-width: 500px;
+      margin: 20px;
+    }
+
+    /* Projects */
+    .projects {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .projects h2 { margin-bottom: 40px; }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .project:hover { transform: translateY(-5px); }
+    .project h3 {
+      margin-bottom: 10px;
+      color: #6a0dad;
+    }
+
+    /* Contact */
+    .contact {
+      padding: 60px 20px;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+    }
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      font-weight: bold;
+      color: #FFD700;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #aaa;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about { flex-direction: column; }
+      .hero h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
   <!-- Navbar -->
-  <header class="bg-black text-white py-4">
-    <div class="container mx-auto flex justify-between items-center px-6">
-      <h1 class="text-xl font-bold">Ahana Bhattacharya</h1>
-      <nav class="space-x-6">
-        <a href="#about" class="hover:text-yellow-400">About</a>
-        <a href="#projects" class="hover:text-yellow-400">Projects</a>
-        <a href="#contact" class="hover:text-yellow-400">Contact</a>
-      </nav>
-    </div>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-black via-gray-900 to-purple-900 text-white text-center py-32">
-    <h2 class="text-4xl md:text-5xl font-bold mb-6">Shaping Ideas Into Impactful Work</h2>
-    <p class="italic text-lg mb-8">"Blending creativity, strategy, and execution to craft solutions that matter."</p>
-    <a href="#projects" class="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-lg hover:bg-yellow-500 transition">
-      View My Work
-    </a>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Hi, I'm [Your Name]</h1>
+    <p>"Design thinker, problem solver, and storyteller – shaping products that matter."</p>
+    <a href="#projects" class="btn">View My Work</a>
+    <a href="resume.pdf" class="btn" target="_blank">Resume</a>
+    <a href="certifications.pdf" class="btn" target="_blank">Certifications</a>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 container mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-6">About Me</h2>
-    <p class="text-lg leading-relaxed">
-      I am a <span class="font-bold">problem-solver and builder</span> who thrives at the intersection of 
-      <span class="font-bold">strategy, design, and execution</span>.  
-      My strength lies in transforming abstract ideas into actionable solutions that create measurable impact.  
-      Whether it’s developing innovative projects, analyzing business problems, or leading collaborations,  
-      I bring clarity, structure, and creativity to every challenge.  
-    </p>
+  <!-- About -->
+  <section class="about" id="about">
+    <img src="https://via.placeholder.com/200" alt="My profile picture">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I’m a curious professional blending design thinking, analytical skills, and a product mindset.  
+        I bring empathy, strategy, and creativity together to craft experiences that leave an impact.  
+        My focus lies in bridging business goals with user needs, transforming challenges into meaningful solutions.  
+      </p>
+    </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-gray-100 container mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-6">Projects</h2>
-    <p class="mb-6">A selection of my work showcasing problem-solving, design thinking, and execution.</p>
-    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-      View Project (PPT)
-    </button>
-  </section>
-
-  <!-- Certifications -->
-  <section id="certifications" class="py-16 container mx-auto px-6">
-    <h2 class="text-2xl font-bold mb-6">Certifications</h2>
-    <ul class="list-disc pl-6 space-y-2">
-      <li>Microsoft AI Product Management – Coursera</li>
-      <li>Business Strategy & Design Thinking – [Your Provider]</li>
-      <li>Other Relevant Certifications</li>
-    </ul>
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <h2>Projects & Case Studies</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>Project One</h3>
+        <p>A short description of your first project or case study.</p>
+      </div>
+      <div class="project">
+        <h3>Project Two</h3>
+        <p>A short description of your second project or case study.</p>
+      </div>
+      <div class="project">
+        <h3>Project Three</h3>
+        <p>A short description of your third project or case study.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Contact -->
-  <footer id="contact" class="bg-black text-white text-center py-10">
-    <h2 class="text-xl font-bold mb-4">Contact Me</h2>
-    <p>Email: <a href="mailto:your.email@example.com" class="text-yellow-400 hover:underline">your.email@example.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" class="text-yellow-400 hover:underline" target="_blank">linkedin.com/in/yourprofile</a></p>
-  </footer>
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <a href="mailto:your.email@example.com">your.email@example.com</a>
+    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+  </section>
 
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Your Name. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
-
